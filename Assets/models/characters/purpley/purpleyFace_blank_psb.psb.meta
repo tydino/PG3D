@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: a5d3f67360617694697a5da10bdd8812
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: eyeLine
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2060
+      width: 1869
+      height: 1039
+    spriteID: 20bc8d0b0888a984dae8840d468902e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2060}
+    spritePosition: {x: 108, y: 516}
+  - name: hit
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3107
+      width: 1006
+      height: 463
+    spriteID: 11b04faa4773d7649ac64668cd869875
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3107}
+    spritePosition: {x: 619, y: 747}
+  - name: closed eyes3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2060
+      y: 1015
+      width: 1796
+      height: 1003
+    spriteID: 72d0beecaffc37c4abe2d9a44cf0bac7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1901, y: 1015}
+    spritePosition: {x: 159, y: 522}
+  - name: closed eyes2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2060
+      y: 4
+      width: 1811
+      height: 1003
+    spriteID: 0b89ed2506778af449bf57dbd5a3151c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1909, y: 4}
+    spritePosition: {x: 151, y: 522}
+  - name: closed eyes1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2060
+      y: 2026
+      width: 1727
+      height: 1003
+    spriteID: fd17a8fc564199c449434b7032d31c3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1877, y: 2026}
+    spritePosition: {x: 183, y: 522}
+  - name: left dizzy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2060
+      y: 3037
+      width: 430
+      height: 521
+    spriteID: 34c33f99dd269a04ba7f81ecbda62655
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2060, y: 3037}
+    spritePosition: {x: 296, y: 746}
+  - name: right dizzy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2498
+      y: 3037
+      width: 412
+      height: 521
+    spriteID: cb61ecc4edf606d4ca8c3f7a90e504d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2498, y: 3037}
+    spritePosition: {x: 1426, y: 714}
+  - name: left pupil
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1018
+      y: 3107
+      width: 456
+      height: 620
+    spriteID: bb63a9ea55f41db488fbd589021fbc9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1018, y: 3107}
+    spritePosition: {x: 500, y: 736}
+  - name: right pupil
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1482
+      y: 3107
+      width: 450
+      height: 620
+    spriteID: 4b0b60faa4c888f43831daa8dac7b5a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1482, y: 3107}
+    spritePosition: {x: 1196, y: 726}
+  - name: open Eyes
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2048
+      height: 2048
+    spriteID: bc67f44c1e9e94c488388de10f95d3e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: eyeLine
+    spriteName: eyeLine
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 20bc8d0b0888a984dae8840d468902e5
+    layerID: 0
+    mosaicPosition: {x: 4, y: 2060}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: hit
+    spriteName: hit
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 11b04faa4773d7649ac64668cd869875
+    layerID: 1010960565
+    mosaicPosition: {x: 4, y: 3107}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: closed eyes3
+    spriteName: closed eyes3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 72d0beecaffc37c4abe2d9a44cf0bac7
+    layerID: 695334343
+    mosaicPosition: {x: 2060, y: 1015}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: closed eyes2
+    spriteName: closed eyes2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0b89ed2506778af449bf57dbd5a3151c
+    layerID: -870749598
+    mosaicPosition: {x: 2060, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: closed eyes1
+    spriteName: closed eyes1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fd17a8fc564199c449434b7032d31c3f
+    layerID: -467465071
+    mosaicPosition: {x: 2060, y: 2026}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: left dizzy
+    spriteName: left dizzy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 34c33f99dd269a04ba7f81ecbda62655
+    layerID: 442546779
+    mosaicPosition: {x: 2060, y: 3037}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: right dizzy
+    spriteName: right dizzy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cb61ecc4edf606d4ca8c3f7a90e504d8
+    layerID: -381354250
+    mosaicPosition: {x: 2498, y: 3037}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: left pupil
+    spriteName: left pupil
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bb63a9ea55f41db488fbd589021fbc9a
+    layerID: -1457803733
+    mosaicPosition: {x: 1018, y: 3107}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: right pupil
+    spriteName: right pupil
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4b0b60faa4c888f43831daa8dac7b5a4
+    layerID: -796364672
+    mosaicPosition: {x: 1482, y: 3107}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: open Eyes
+    spriteName: open Eyes
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bc67f44c1e9e94c488388de10f95d3e9
+    layerID: 2070508012
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
