@@ -7,35 +7,39 @@ public class ThirdPersonMovement : MonoBehaviour
     public CharacterController controller;
     public Transform cam;
     public Rigidbody rb;
+    public bool PlayerHit;//controlled externally
+    public bool HitEnemy;
+    public bool HitBoxOn;
+    public GameObject HitBox;
+    public int health = 3;
     [Header("speeds")]
     public float walkSpeed = 6f;
     public float runSpeed = 10f;
-    public float airSpeed = 8f;
+    public float airMultiplier = 1.25f;
     public float speed = 6f;
-
     [Header("Jumping")]
-    public float jumpForce;
-    public float jumpCooldown;
-    bool readyToJump;
+    public float jumpHeight = 10f;
+    public float gravity = -9.81f;
+    public Vector3 velocity;
+    public bool isGrounded;
+    public bool canDoubleJump = false;
     [Header("turning")]
     public float turnSmoothTime = 0.5f;
     float turnSmoothVelocity;
     [Header("KeyBinds")]
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
+    public KeyCode SpinJump = KeyCode.Q;//figure out how to do, or ask for help.
     public MoveMentState state;
     public enum MoveMentState
     {
         walking,
-        sprinting,
-        air
+        sprinting
     }
     [Header("ground Check")]
     public float playerHeight;
     public LayerMask whatIGround;
     bool grounded;
-
-    void Start(){readyToJump=true;}
 
     void checkKeys()
     {
@@ -51,25 +55,34 @@ public class ThirdPersonMovement : MonoBehaviour
     void Update()
     {
         checkKeys();
+        isGrounded = controller.isGrounded;
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+            canDoubleJump=true;
+        }
         
         //jump
-        if(Input.GetKey(jumpKey) && readyToJump == true && grounded == true)
+        if(Input.GetKey(jumpKey) && grounded == true)
         {
-            readyToJump = false;
-
-            jump();
-
-            Invoke(nameof(ResetJump), jumpCooldown);
+            if (isGrounded)
+            {
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            }
+            else if (canDoubleJump)
+            {
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                canDoubleJump = false;
+            }
+            
         }
 
         //grounded?
         grounded=Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f+0.2f, whatIGround);
-        if (grounded == false){state=MoveMentState.air;}
 
         //main movement
         if(state==MoveMentState.walking){speed = walkSpeed;}
         if(state==MoveMentState.sprinting){speed = runSpeed;}
-        if(state==MoveMentState.air){speed = airSpeed;}
 
         //get direction
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -83,19 +96,11 @@ public class ThirdPersonMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir * speed * Time.deltaTime);
+            if (grounded==true){controller.Move(moveDir * speed * Time.deltaTime);}
+            if (grounded==false){controller.Move(moveDir * speed * airMultiplier * Time.deltaTime);}
+            
         }
-    }
-
-    void jump()
-    {
-        //reset y velocity
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-    }
-    void ResetJump()
-    {
-        readyToJump=true;
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 }
