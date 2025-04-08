@@ -12,13 +12,14 @@ public class ThirdPersonMovement : MonoBehaviour
     public bool HitBoxOn;
     public GameObject HitBox;
     public int health = 3;
+    public bool AmWalk;
     [Header("speeds")]
     public float walkSpeed = 6f;
     public float runSpeed = 10f;
     public float airMultiplier = 1.25f;
     public float speed = 6f;
     [Header("Jumping")]
-    public float jumpHeight = 10f;
+    public float jumpHeight = 1f;
     public float gravity = -9.81f;
     public Vector3 velocity;
     public bool isGrounded;
@@ -29,12 +30,13 @@ public class ThirdPersonMovement : MonoBehaviour
     [Header("KeyBinds")]
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
-    public KeyCode SpinJump = KeyCode.Q;//figure out how to do, or ask for help.
+    public KeyCode SpinJump = KeyCode.Q;
     public MoveMentState state;
     public enum MoveMentState
     {
         walking,
-        sprinting
+        sprinting,
+        idle
     }
     [Header("ground Check")]
     public float playerHeight;
@@ -43,14 +45,20 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void checkKeys()
     {
-        if (Input.GetKeyDown(sprintKey)==true)
+        if(Input.GetKey(KeyCode.W)||Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.S)||Input.GetKey(KeyCode.D)){AmWalk=true;}else{AmWalk=false;}
+        if (Input.GetKey(sprintKey)==true)
         {
             state=MoveMentState.sprinting;
-        }else
+        }else if(AmWalk)
         {
             state=MoveMentState.walking;
+        }else
+        {
+            state=MoveMentState.idle;
         }
     }
+
+    void Start(){HitBox.SetActive(false);}
 
     void Update()
     {
@@ -63,7 +71,7 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         
         //jump
-        if(Input.GetKey(jumpKey) && grounded == true)
+        if(Input.GetButtonDown("Jump"))
         {
             if (isGrounded)
             {
@@ -77,6 +85,8 @@ public class ThirdPersonMovement : MonoBehaviour
             
         }
 
+        //spinJump
+        if(Input.GetKey(SpinJump)) {if (isGrounded){velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);HitBox.SetActive(true);HitBoxOn=true;HitEnemy=false;}}
         //grounded?
         grounded=Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f+0.2f, whatIGround);
 
@@ -100,6 +110,7 @@ public class ThirdPersonMovement : MonoBehaviour
             if (grounded==false){controller.Move(moveDir * speed * airMultiplier * Time.deltaTime);}
             
         }
+        //jump
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
