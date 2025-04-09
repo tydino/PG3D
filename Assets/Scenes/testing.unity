@@ -1121,7 +1121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993142690}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22975291, y: 0.000000018722702, z: -0.00000000441983, w: 0.973249}
+  m_LocalRotation: {x: 0.22975291, y: -0.000000018722702, z: 0.00000000441983, w: 0.973249}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2421,6 +2421,10 @@ PrefabInstance:
       propertyPath: animEye
       value: 
       objectReference: {fileID: 846172186}
+    - target: {fileID: 2720951852416328690, guid: 0f7413050bafbb948bf537d5922d241a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 4446510092320312389, guid: 0f7413050bafbb948bf537d5922d241a, type: 3}
       propertyPath: blink
       value: 
