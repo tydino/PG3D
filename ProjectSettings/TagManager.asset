@@ -38,6 +38,15 @@ TagManager:
   - 
   - player
   m_SortingLayers:
+  - name: backgrounds
+    uniqueID: 4171216169
+    locked: 0
+  - name: eyes
+    uniqueID: 4028866309
+    locked: 0
+  - name: mouths
+    uniqueID: 1250041465
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
