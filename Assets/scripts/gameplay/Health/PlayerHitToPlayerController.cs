@@ -12,10 +12,12 @@ public class PlayerHitToPlayerController : MonoBehaviour
         {
             if(tpm.HitEnemy==false)
             {
-                //deduct damage to enemy when enemy script in
+                EnemyHealth eh = other.gameObject.GetComponent<EnemyHealth>();
+                eh.health--;
                 tpm.HitEnemy = true;
                 tpm.HitBoxOn = false;
                 tpm.HitBox.SetActive(false);
+                Debug.Log("hit enemy");
             }
         }
     }
