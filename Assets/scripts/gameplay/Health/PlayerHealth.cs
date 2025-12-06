@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 6;
+    public int health = 5;
+
+    public int baselineHealth = 5;
 }
