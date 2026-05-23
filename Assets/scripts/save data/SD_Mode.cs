@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class SD_Mode
+public class SD_Mode // this is settings!
 {
     public sd_Mode mode;
     public modes currentMode;
@@ -23,10 +23,6 @@ public class SD_Mode
 
         string data = JsonUtility.ToJson(mode);
         string filePath = SaveData.current.path + "/Mode.json";
-        if (!System.IO.Directory.Exists(filePath))
-        {
-            System.IO.Directory.CreateDirectory(filePath);
-        }
         System.IO.File.WriteAllText(filePath, data);
     }
 

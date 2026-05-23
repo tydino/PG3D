@@ -30,7 +30,7 @@ public class AnimatorHitBox_player : MonoBehaviour
         animEye.SetBool(RightEye, false);
         animEye.SetBool("moving", true);
         animEye.SetBool("hit", false);
-        animEye.SetBool("dizzy", false);
+        animEye.SetBool("hitting", false);
         //calculate blinks
         int vel = Mathf.CeilToInt(tpm.velocity.y);
         //eye movement
@@ -63,7 +63,7 @@ public class AnimatorHitBox_player : MonoBehaviour
 
     void blinkVoid(){if(canBlink==false){blink.blinking = true; canBlink = true;}}
 
-    void playerAnim()
+    /*void playerAnim()
     {
         animMain.SetBool(WalkAnim, false);
         animMain.SetBool(RunAnim, false);
@@ -78,13 +78,13 @@ public class AnimatorHitBox_player : MonoBehaviour
         if(Input.GetButtonDown("Jump")){animMain.SetBool(JumpAnim, true);}
         if(Input.GetKey(KeyCode.Q)) {animMain.SetBool(AttackAnim, true);}
         if(!tpm.isGrounded){animMain.SetBool(FallAnim, true);}
-    }
+    }*/
     public void CancelHitBox(){tpm.HitBox.SetActive(false); tpm.HitBoxOn = false;}
 
     void Update()
     {
         Eyes();
-        playerAnim();
+        ///playerAnim();
         if(canBlink == true){canBlink = false; float Time = Random.Range(10f, 20f); Invoke("blinkVoid", Time);}
     }
 }

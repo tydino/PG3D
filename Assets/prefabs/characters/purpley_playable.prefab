@@ -98,8 +98,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54caaa5a34e845542a84cc0a4ffd5c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  baselineHealth: 5
+  Life: 3
+  health: 6
+  EasyMode:
+    Lives: 0
+    BaseLineHealth: 0
+  MediumMode:
+    Lives: 0
+    BaseLineHealth: 0
+  HardMode:
+    Lives: 0
+    BaseLineHealth: 0
 --- !u!114 &4541743111164984269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,6 +307,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1762483103825564906, guid: f0ff20a69db51d548addddb67471d1f4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 415aba5faa47e8244b00c9b632f70a5d, type: 2}
+    - target: {fileID: -1206874426333947015, guid: f0ff20a69db51d548addddb67471d1f4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 415aba5faa47e8244b00c9b632f70a5d, type: 2}
     - target: {fileID: -1206874426333947015, guid: f0ff20a69db51d548addddb67471d1f4, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -336,7 +353,7 @@ MonoBehaviour:
   ForwardEye: f
   LeftEye: l
   RightEye: r
-  blink: {fileID: 0}
+  blink: {fileID: 8245366851060491752}
 --- !u!114 &8245366851060491752
 MonoBehaviour:
   m_ObjectHideFlags: 0

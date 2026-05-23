@@ -24,6 +24,14 @@ public class SaveData : MonoBehaviour
         {
             sdmode.SaveToJson();
         }
+        if (WhatSceneIsThis == TypeOfScene.level)
+        {
+            sdmode.SaveToJson();
+        }
+        if (WhatSceneIsThis == TypeOfScene.world)
+        {
+            sdmode.SaveToJson();
+        }
     }
 
     public void load()
@@ -37,6 +45,11 @@ public class SaveData : MonoBehaviour
         if (WhatSceneIsThis == TypeOfScene.level)
         {
             sdmode.LoadFromJson();
+            PlayerHealth.current.setMode();
+        }
+        if(WhatSceneIsThis == TypeOfScene.world)
+        {
+            sdmode.LoadFromJson();
         }
     }
 
@@ -48,6 +61,7 @@ public class SaveData : MonoBehaviour
 
     void Start()
     {
+        current = this;
         load();
         save();
     }
