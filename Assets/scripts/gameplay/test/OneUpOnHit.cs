@@ -9,7 +9,7 @@ public class OneUpOnHit : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Lifes life = other.gameObject.GetComponent<Lifes>();
+            PlayerHealth life = other.gameObject.GetComponent<PlayerHealth>();
             life.Life++;
             Destroy(thisObj);
         }

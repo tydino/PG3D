@@ -41,7 +41,7 @@ public class AnimatorHitBox_player : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.Q))
         {
-            animEye.SetBool("dizzy", true);
+            animEye.SetBool("hitting", true);
         }
         else if(vel > 0)
         {
