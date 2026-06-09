@@ -1861,7 +1861,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357413571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.363, y: 1.72, z: 3.453}
+  m_LocalPosition: {x: -3.363, y: 1.25, z: 3.453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1929,7 +1929,7 @@ MonoBehaviour:
     eyeRightPosition: {fileID: 1771673704}
     eyeTopPosition: {fileID: 457050360}
     eyeBottomPosition: {fileID: 1879806541}
-    visibilityLength: 10
+    visibilityLength: 5
     IfEnemy:
       serializedVersion: 2
       m_Bits: 2147483648
@@ -1945,10 +1945,10 @@ MonoBehaviour:
     thisNPC: {fileID: 0}
     loopsOrBackAndForth: 1
     positionsToGoBetween:
-    - {x: -2.5, y: 1.5, z: 2.75}
-    - {x: -4, y: 1.5, z: 2.75}
-    - {x: -4, y: 1.5, z: 4}
-    - {x: -2.5, y: 1.5, z: 4}
+    - {x: -2.5, y: 1.25, z: 2.75}
+    - {x: -4, y: 1.25, z: 2.75}
+    - {x: -4, y: 1.25, z: 4}
+    - {x: -2.5, y: 1.25, z: 4}
     threasholdForCloseToPatrolTarget: 1
     targetPosition: 0
   chaseGoal:
@@ -1956,6 +1956,9 @@ MonoBehaviour:
     thisNPC: {fileID: 0}
     Enemy: {fileID: 0}
     threasholdBeforeAttack: 1
+  proceduralGoal:
+    canInterruptThis: 0
+    thisNPC: {fileID: 0}
 --- !u!1 &1444964644
 GameObject:
   m_ObjectHideFlags: 3
@@ -2304,7 +2307,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500536764}
-  m_LocalRotation: {x: 0.23248354, y: 0.000000008367467, z: -0.0000000020001003, w: 0.97260034}
+  m_LocalRotation: {x: 0.23248354, y: -0.000000008367467, z: 0.0000000020001003, w: 0.97260034}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3569,8 +3572,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109543485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.28, y: 1, z: 3.42}
-  m_LocalScale: {x: 2, y: 0.5, z: 2}
+  m_LocalPosition: {x: -3.28, y: 0.45, z: 3.42}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
