@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7962005740609092931}
   - component: {fileID: 4287347526408002358}
   - component: {fileID: 4541743111164984269}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: purpley_playable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,6 @@ MonoBehaviour:
   HitEnemy: 0
   HitBoxOn: 0
   HitBox: {fileID: 1970151255698240777}
-  health: 3
   AmWalk: 0
   walkSpeed: 2
   runSpeed: 4

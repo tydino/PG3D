@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class SVEBrain : NPC
 {
-    Rigidbody rb;
+    public PatrolGoal patrolGoal;
+    public ChaseEnemyGoal chaseGoal;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        patrolGoal.thisNPC = this;
+        chaseGoal.thisNPC = this;
     }
 
-    public GoalSelector Goal;
+    private void Start()
+    {
+        Goals.addGoal(1, chaseGoal);
+        Goals.addGoal(2, patrolGoal);
+    }
 }

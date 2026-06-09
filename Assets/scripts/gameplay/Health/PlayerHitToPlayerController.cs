@@ -12,7 +12,7 @@ public class PlayerHitToPlayerController : MonoBehaviour
         {
             if(tpm.HitEnemy==false)
             {
-                EnemyHealth eh = other.gameObject.GetComponent<EnemyHealth>();
+                Health eh = other.gameObject.GetComponent<NPC>().health;
                 eh.health--;
                 tpm.HitEnemy = true;
                 tpm.HitBoxOn = false;

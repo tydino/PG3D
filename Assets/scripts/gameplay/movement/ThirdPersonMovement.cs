@@ -11,7 +11,6 @@ public class ThirdPersonMovement : MonoBehaviour
     public bool HitEnemy;
     public bool HitBoxOn;
     public GameObject HitBox;
-    public int health = 3;
     public bool AmWalk;
     [Header("speeds")]
     public float walkSpeed = 6f;

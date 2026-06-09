@@ -1,3 +1,4 @@
+[System.Serializable]
 public abstract class Goal
 {
     public abstract bool canUse();
