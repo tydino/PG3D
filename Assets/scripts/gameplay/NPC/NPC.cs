@@ -69,6 +69,10 @@ public class NPC_Vision
     public RaycastHit VisibilityDownObstacle;
     public LayerMask IfEnemy;
     public LayerMask Obstacle;
+    public bool obstaclefront;
+    public bool obstacleft;
+    public bool obstacright;
+    public bool obstacleup;
 
     public void Update()
     {
@@ -119,10 +123,6 @@ public class NPC_Vision
             {
                 Debug.DrawRay(eyeBottomPosition.position, eyeBottomPosition.TransformDirection(Vector3.forward) * visibilityLength, Color.red);
             }
-        }
-        if (HasEyes)
-        {
-            CheckVisionForObstacle();
         }
     }
     public Vector3 CheckVisionForEnemy(out GameObject Enemy)
@@ -192,6 +192,19 @@ public class NPC_Vision
         }
         return new Vector3(0, -1000, 0);
     }
+
+    public bool obstacledown()
+    {
+        Physics.Raycast(eyeBottomPosition.position, eyeBottomPosition.TransformDirection(Vector3.forward), out VisibilityDownObstacle, visibilityLength, IfEnemy);
+        if (VisibilityDownObstacle.collider != null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 }
 
 [System.Serializable]
@@ -236,7 +249,7 @@ public class NPC_movement
         //makes sure target position is not directly abovem if it is, it will reroll direction
         if (direction.sqrMagnitude < 0.1f)
         {
-            if (loopsOrBackAndForth)
+            if (!loopsOrBackAndForth)
             {
                 targetPosition++;
 
@@ -283,20 +296,22 @@ public class NPC_movement
     }
     public void FollowPlayerToAttckPlayer(NPC npc)
     {
-        //gets placement to look towards
-        Vector3 EnemyCenter = npc.settings.isHostile.Enemy.transform.position;
-        EnemyCenter.y = EnemyCenter.y + 0.5f;
-        //get direction
-        Vector3 direction = EnemyCenter - npc.rb.position;
+        if (npc.vision.obstacledown()) {
+            //gets placement to look towards
+            Vector3 EnemyCenter = npc.settings.isHostile.Enemy.transform.position;
+            EnemyCenter.y = EnemyCenter.y + 0.5f;
+            //get direction
+            Vector3 direction = EnemyCenter - npc.rb.position;
 
-        //gets and sets rotation
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        Quaternion nextRotation = Quaternion.RotateTowards(npc.rb.rotation, lookRotation, RotationSpeed * Time.fixedDeltaTime);
-        npc.rb.MoveRotation(nextRotation);
+            //gets and sets rotation
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            Quaternion nextRotation = Quaternion.RotateTowards(npc.rb.rotation, lookRotation, RotationSpeed * Time.fixedDeltaTime);
+            npc.rb.MoveRotation(nextRotation);
 
-        //moves NPC
-        Vector3 nextPosition = Vector3.MoveTowards(npc.rb.position, npc.settings.isHostile.Enemy.transform.position, WalkSpeed * Time.fixedDeltaTime);
-        npc.rb.MovePosition(nextPosition);
+            //moves NPC
+            Vector3 nextPosition = Vector3.MoveTowards(npc.rb.position, npc.settings.isHostile.Enemy.transform.position, WalkSpeed * Time.fixedDeltaTime);
+            npc.rb.MovePosition(nextPosition);
+        }
     }
     #endregion
 }
