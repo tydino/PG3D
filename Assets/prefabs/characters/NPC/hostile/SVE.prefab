@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 5957605832854148439}
   - component: {fileID: 5957605832854148441}
   - component: {fileID: 5957605832854148440}
+  - component: {fileID: 6659164934886523695}
+  - component: {fileID: 4060368588621621664}
   m_Layer: 0
   m_Name: SVE
   m_TagString: enemy
@@ -201,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5957605832854148441}
-  a: {fileID: 0}
+  a: {fileID: 6659164934886523695}
   status: 0
   TemporaryObjects: {fileID: 5957605833582742259}
   settings:
@@ -230,6 +232,10 @@ MonoBehaviour:
     Obstacle:
       serializedVersion: 2
       m_Bits: 8
+    obstaclefront: 0
+    obstacleft: 0
+    obstacright: 0
+    obstacleup: 0
   movement:
     WalkSpeed: 0.25
     RotationSpeed: 80
@@ -237,6 +243,39 @@ MonoBehaviour:
     targetPosition: 0
     loopsOrBackAndForth: 1
     distanceBeforeGoingBackToList_pathToPath: 3
+--- !u!95 &6659164934886523695
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5957605832854148434}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe9079f46b3bd684cb49640a6d871380, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4060368588621621664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5957605832854148434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c628e2d2086674788fb6f74f4543ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5957605833091800625
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,14 +458,42 @@ PrefabInstance:
     - target: {fileID: -5324531855699944674, guid: 5451db1a364e0cd40a73d89b2188f088, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 88058a389cb84994bb1e4f796e22ca55, type: 2}
+      objectReference: {fileID: 2100000, guid: d02f6c6438f84d64eb0beb9a8e4a5654, type: 2}
     - target: {fileID: -5324531855699944674, guid: 5451db1a364e0cd40a73d89b2188f088, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: af525803a36b9bb48b284da7f30604fd, type: 2}
+    - target: {fileID: -4388680750337458582, guid: 5451db1a364e0cd40a73d89b2188f088, type: 3}
+      propertyPath: m_Name
+      value: top jaw
+      objectReference: {fileID: 0}
+    - target: {fileID: -3965514501104072456, guid: 5451db1a364e0cd40a73d89b2188f088, type: 3}
+      propertyPath: m_Name
+      value: left arm
+      objectReference: {fileID: 0}
+    - target: {fileID: -1689137151616660966, guid: 5451db1a364e0cd40a73d89b2188f088, type: 3}
+      propertyPath: m_Name
+      value: left foot
+      objectReference: {fileID: 0}
+    - target: {fileID: -1064508603313070009, guid: 5451db1a364e0cd40a73d89b2188f088, type: 3}
+      propertyPath: m_Name
+      value: right foot
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5451db1a364e0cd40a73d89b2188f088, type: 3}
       propertyPath: m_Name
       value: sve
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160272932807521224, guid: 5451db1a364e0cd40a73d89b2188f088, type: 3}
+      propertyPath: m_Name
+      value: bottom jaw
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905609870639353253, guid: 5451db1a364e0cd40a73d89b2188f088, type: 3}
+      propertyPath: m_Name
+      value: root
+      objectReference: {fileID: 0}
+    - target: {fileID: 7383561504374303564, guid: 5451db1a364e0cd40a73d89b2188f088, type: 3}
+      propertyPath: m_Name
+      value: right arm
       objectReference: {fileID: 0}
     - target: {fileID: 8303206371154218864, guid: 5451db1a364e0cd40a73d89b2188f088, type: 3}
       propertyPath: m_Materials.Array.data[0]

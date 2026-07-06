@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class EnemyHitPlayer : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    public void HitPlayer()
     {
-        if (other.gameObject.tag == "Player")
-        {
-            PlayerHealth ph = other.gameObject.GetComponent<PlayerHealth>();
-            ph.health--;
-        }
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        player.GetComponent<PlayerHealth>().health--;
     }
 }
