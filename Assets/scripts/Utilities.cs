@@ -5,6 +5,8 @@ using UnityEngine;
 public class Utilities
 {
     public static Utilities current = new Utilities();
+
+    #region distances
     public float DistanceFrom(Vector3 whereTo, Vector3 currentPos)
     {
         return Vector3.Distance(whereTo, currentPos);
@@ -41,4 +43,17 @@ public class Utilities
         }
         return currentDistanceInList;
     }
+    #endregion
+
+    #region Parenting
+    public void ParentObjectToAnotherObject(GameObject objectToParent, GameObject parent)
+    {
+        objectToParent.transform.SetParent(parent.transform);
+    }
+
+    public void RemoveObjectFromParent(GameObject removeFromParent)
+    {
+        removeFromParent.transform.SetParent(null);
+    }
+    #endregion
 }

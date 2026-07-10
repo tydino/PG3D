@@ -23,6 +23,11 @@ public class NPC : MonoBehaviour
 
     private void Update()
     {
+        if(settings.health.health <= 0)
+        {
+            a.SetBool("dead", true);
+            return; // stops the rest of the NPC from working.
+        }
         SetStatus();
         vision.Update();
         if (settings.isHostile.IsHostile)
@@ -30,6 +35,11 @@ public class NPC : MonoBehaviour
             vision.CheckVisionForEnemy(out settings.isHostile.Enemy);
         }
         movement.Update(this);
+    }
+
+    public void killNPC()
+    {
+        Destroy(gameObject);
     }
 
     public virtual void SetStatus() { }
